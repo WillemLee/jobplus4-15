@@ -1,0 +1,10 @@
+{% macro render_form(form,url) %}
+<form method="POST" action="{{ url }}">
+    {{ from.csrf_token }}
+    <div class="checkbox">
+    	<label>{{ field() }} {{ field.label.text}}</label>
+    </div>
+    
+</form>
+
+{% endmacro %}
