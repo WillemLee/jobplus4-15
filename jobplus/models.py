@@ -62,7 +62,7 @@ class User(Base, UserMixin):
     def password(self):
         return self._password
 
-    @property.setter
+    @password.setter
     def password(self, orig_password):
         self._password = generate_password_hash(orig_password)
 
